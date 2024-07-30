@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Input</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+    function updateFields() {
+      var selectNama = document.getElementById("nama");
+      var inputAbsen = document.getElementById("alamat");
+      var inputJumlahBayar = document.getElementById("no_hp");
+
+      var selectedOption = selectNama.options[selectNama.selectedIndex];
+      var text = selectedOption.text.trim();
+      var absenNumber = "";
+
+      if (text !== "Pilih Nama") {
+        absenNumber = text.split(' ')[0].trim();
+      }
+
+      if (selectedOption.value) {
+        inputAbsen.value = absenNumber;
+        inputJumlahBayar.value = "1"; // Nilai tetap 1 untuk semua opsi
+      } else {
+        inputAbsen.value = "";
+        inputJumlahBayar.value = "";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div id="form-container">
+    <h2>PEMBAYARAN KAS XI-G</h2>
+    <form action="https://script.google.com/macros/s/AKfycbz6TqmSEFb48xPfRrUFGpaJjHedQNvOQel4Crzj2sPguuTK-j46ZZXvHh3Bq8EimT7D6A/exec" method="post">
+      <label for="nama">Nama:</label>
+      <select id="nama" name="nama" required onchange="updateFields()">
+        <option value="" disabled selected>Pilih Nama</option>
+        <option value="AHMAD RIFAI ALFIANTO">01 AHMAD RIFAI ALFIANTO</option>
+        <option value="AILSA NASYWA AZALIA">02 AILSA NASYWA AZALIA</option>
+        <option value="ALMASYAFA SALSABELA">03 ALMASYAFA SALSABELA</option>
+        <option value="A'MAL FARID">04 A'MAL FARID</option>
+        <option value="ANDITA RAFA RAMADHANI">05 ANDITA RAFA RAMADHANI</option>
+        <option value="ANNISA AYU FEBRIANTI">06 ANNISA AYU FEBRIANTI</option>
+        <option value="AULIA RAHMA PERTIWI">07 AULIA RAHMA PERTIWI</option>
+        <option value="AURA SHIFA BUNGA RAMADHANI">08 AURA SHIFA BUNGA RAMADHANI</option>
+        <option value="AYU ANJANI PANGESTU">09 AYU ANJANI PANGESTU</option>
+        <option value="DAMAR SASI GIRIPASA">10 DAMAR SASI GIRIPASA</option>
+        <option value="DINDA ZAHRA KURNIA">11 DINDA ZAHRA KURNIA</option>
+        <option value="FAHRA SYAFIRA">12 FAHRA SYAFIRA</option>
+        <option value="FAIZ PRATAMA PUTRA">13 FAIZ PRATAMA PUTRA</option>
+        <option value="FEYLLA AFITA RACHMAYANI">14 FEYLLA AFITA RACHMAYANI</option>
+        <option value="HUSNA AMNESTIFA ARIFIN">15 HUSNA AMNESTIFA ARIFIN</option>
+        <option value="KEVIN DEANDRE PUTRA VALENCIA">16 KEVIN DEANDRE PUTRA VALENCIA</option>
+        <option value="LATHIFATUN SHOLEHAH">17 LATHIFATUN SHOLEHAH</option>
+        <option value="MAIZA KENESARAS ALMAGHFIRA">18 MAIZA KENESARAS ALMAGHFIRA</option>
+        <option value="MUHAMMAD DAVIN SYAHVERO SUMARWAN">19 MUHAMMAD DAVIN SYAHVERO SUMARWAN</option>
+        <option value="MUHAMMAD RIZAL">20 MUHAMMAD RIZAL</option>
+        <option value="NABILAH MAHFUDHAH WIDYAS PUTRI">21 NABILAH MAHFUDHAH WIDYAS PUTRI</option>
+        <option value="NAIFAH KHANSA AZAHRA">22 NAIFAH KHANSA AZAHRA</option>
+        <option value="NATASYA ZAHRANI AZIZAH">23 NATASYA ZAHRANI AZIZAH</option>
+        <option value="NIMAS TIARA PUSPITA SARI">24 NIMAS TIARA PUSPITA SARI</option>
+        <option value="PUTRI WINDIA SARI">25 PUTRI WINDIA SARI</option>
+        <option value="REVALINA SYAHRANI PUTRI">26 REVALINA SYAHRANI PUTRI</option>
+        <option value="RISKY INDAH PUJI LESTARI">27 RISKY INDAH PUJI LESTARI</option>
+        <option value="SAFIRA ARISTA MAHESWARI">28 SAFIRA ARISTA MAHESWARI</option>
+        <option value="SEPTIANA TRI RHOMADHONI">29 SEPTIANA TRI RHOMADHONI</option>
+        <option value="SHYLLA DZARA MADINA">30 SHYLLA DZARA MADINA</option>
+        <option value="SULIS SANTI WULANDARI">31 SULIS SANTI WULANDARI</option>
+        <option value="SYERIL PUTRI OCTAVIANTI">32 SYERIL PUTRI OCTAVIANTI</option>
+        <option value="TIRTANIA SABRINA INDAH PUTRI">33 TIRTANIA SABRINA INDAH PUTRI</option>
+        <option value="VALLENT CAHYA RAMADHAN">34 VALLENT CAHYA RAMADHAN</option>
+        <option value="YAYANG MEI ANGGITA">35 YAYANG MEI ANGGITA</option>
+        <option value="ZULFA MUNIFAH">36 ZULFA MUNIFAH</option>
+      </select>
+      <label for="alamat">Absen:</label>
+      <input type="text" id="alamat" name="alamat" required>
+      <label for="no_hp">Jumlah Bayar:</label>
+      <input type="text" id="no_hp" name="no_hp" pattern="[0-9]{1,}" required>
+      <input type="submit" value="Simpan Data">
+    </form>
+  </div>
+
+  <div id="footer">
+    &copy; XI-G 2024, All rights reserved
+  </div>
+</body>
+
+</html>

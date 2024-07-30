@@ -1,0 +1,169 @@
+body {
+    background-color: #f0f8ff; /* Lighter background color */
+    font-family: 'Arial', sans-serif;
+    color: #333333; /* Darker text color for better contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  #form-container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border: 2px solid #1E90FF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  #form-container h2 {
+    text-align: center;
+    color: #1E90FF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #form-container label {
+    color: #1E90FF;
+    font-size: 16px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  #form-container input[type="text"],
+  #form-container input[type="tel"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #dddddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  #form-container input[type="text"]:focus,
+  #form-container input[type="tel"]:focus {
+    border-color: #1E90FF;
+  }
+  
+  #form-container input[type="submit"] {
+    background-color: #1E90FF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeInUp 2s ease-out;
+  }
+  
+  #form-container input[type="submit"]:hover {
+    background-color: #004B8D;
+    transform: scale(1.05);
+  }
+  
+  #footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1E90FF;
+    color: #FFFFFF;
+    font-size: 12px;
+    animation: fadeIn 2.5s ease-in-out;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    #form-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    #form-container h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  
+    #form-container label {
+      font-size: 14px;
+    }
+  
+    #form-container input[type="text"],
+    #form-container input[type="tel"] {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    #form-container input[type="submit"] {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  
+    #footer {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #form-container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    #form-container h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  
+    #form-container label {
+      font-size: 12px;
+    }
+  
+    #form-container input[type="text"],
+    #form-container input[type="tel"] {
+      padding: 6px;
+      font-size: 12px;
+    }
+  
+    #form-container input[type="submit"] {
+      padding: 8px 10px;
+      font-size: 12px;
+    }
+  
+    #footer {
+      font-size: 10px;
+    }
+  }
+  
